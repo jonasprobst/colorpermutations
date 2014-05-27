@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Permutation</title>
+	<meta name="author" content="Jonas Probst">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="resources/css/main.css">
+	<script src="resources/js/jquery-1.11.1.min.js"></script>
+	<script src="resources/js/jquery-ui-1.9.2.custom.min.js"></script>
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> -->
+	<script src="resources/js/jquery.fullscreen-min.js"></script>
+	<script src="resources/js/colorpermutations.js"></script>
+</head>
+<body>
+	<div id="container" class="fullscreen">
+		<nav id="ctrl-container">
+			<span id="button-fs" title="toggle fullscreen" class="btn onload">&lt; &gt;</span>
+			<span id="button-play" title="play / pause" class="btn onload">-&gt;</span>
+			<span id="button-settings" title="show / hide settings" class="btn onload">s</span>
+			<span id="button-info" title="show / hide info" class="btn onload">i</span>
+		</nav>
+		<div id="info-container" class="info-box">
+			<span id="button-info-close" class="btn btn-close">x</span>
+			<h1>Color Permutation</h1>
+			<p>Jonas Probst, 2012</p>
+			<p>A program computing all permutations of colors within the RGB color space in a area of a given resolution. Thus showing all possible digital images of the past, present and future within these boundaries.<br/>Due to the magnitude of imagery and limited by the ability of computers today, this process takes billions of years to finish.
+			<ul>
+				<li id="resolution">Resolution: 256 x 192 px</li>
+				<li id="duration">Duration: 5 x (255 x 255 x 255)^(256 x 192) ms</li>
+				<li id="start">Start: Thu Aug 27 2012 08:52:25 GMT+0200 (CEST)</li>
+				<li id="stop"> Stop:</li>
+			</ul>
+		</div>
+		<div id="settings-container" class="info-box">
+			<span id="button-settings-close" class="btn btn-close">x</span>
+			<h1>Settings</h1>
+			<p>These settings can only be changed before the program is started for the first time. Reload the page to change the settings thereafter.<br/></p>
+			<ul>
+				<li><label id="slider-size-label" for="slider-size">Element size:</label><input id="slider-size" type="range" name="size" min="1" max="9" step="1" value="3"><span id="slider-size-value"></span></li>
+				<li id="settings-resolution"></li>
+			</ul>
+		</div>
+		<svg id="svg-container" xmlns="http://www.w3.org/2000/svg">
+			<rect id="svg-background" x="0" y="0" width="10" height="10" fill="#646464"/>
+			<rect id="0" x="0" y="0" width="3" height="3" fill="rgb(255,255,255)"/>
+		</svg>
+	</div>
+</body>
+</html>
