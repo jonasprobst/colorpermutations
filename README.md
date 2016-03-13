@@ -1,1 +1,1 @@
-working website: [http://colorpermutations.jonasprobst.ch](http://colorpermutations.jonasprobst.com)
+working website: [http://jonasprobst.github.io/colorpermutations/](http://jonasprobst.github.io/colorpermutations/)
